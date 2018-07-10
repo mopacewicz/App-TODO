@@ -11,6 +11,12 @@ export const removeTodo = id => ({
     id
 })
 
+export const completeTodo = id => ({
+    type: 'COMPLETE_TODO',
+    id
+})
+
+
 
 
 
