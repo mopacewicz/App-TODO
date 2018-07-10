@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Todo = ({ text }) => (
+const Todo = ({ removeOnClick, text }) => (
     <li>
         {text}
+        <button onClick={removeOnClick} >
+            Delete
+        </button>
     </li>
 )
 
