@@ -4,12 +4,14 @@ import { connect } from 'react-redux'
 import { removeTodo } from '../actions'
 import { completeTodo } from '../actions'
 
-const TodoList = ({todos, removeTodoDispatcher, completeTodoDispatcher}) => (
+const TodoList = ({todos, removeTodoDispatcher, completeTodoDispatcher, editTodoDispatcher, isEditing}) => (
   <ul>
     {todos.map(todo =>
       <Todo
         key={todo.id}
         {...todo}
+        state={
+        isEditing=false}
         removeOnClick={() => removeTodoDispatcher(todo.id)}
         completeOnClick={() => completeTodoDispatcher(todo.id)}
         completed={todo.completed}

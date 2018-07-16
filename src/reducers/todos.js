@@ -19,9 +19,19 @@ const todos = (state = [], action) => {
                     : todo
             )
 
-        default:
-            return state
-    }
-}
+
+        case 'EDIT_TODO':
+            return state.map(todo =>
+                (todo.id === action.id)
+                    ? {...todo, completed: !todo.completed}
+                    : todo
+            )
+
+
+                    default:
+                        return state
+                }
+            }
+
 
 export default todos

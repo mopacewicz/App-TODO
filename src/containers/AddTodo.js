@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import { searchTodo } from '../actions'
 
 const AddTodo = ({ dispatch }) => {
     let input
@@ -22,6 +23,13 @@ const AddTodo = ({ dispatch }) => {
                     Add Todo
                 </button>
             </form>
+            <input
+                type="text"
+                placeholder="Search..."
+                /*value={this.props.searchTodo}*/
+                onChange={this.handleSearchChange}
+            />
+
         </div>
     )
 }

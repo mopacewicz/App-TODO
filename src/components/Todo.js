@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Todo = ({ removeOnClick, completeOnClick, text, completed }) => (
+const Todo = ({ removeOnClick, completeOnClick, text, completed, onEditClick }) => (
     <li style={ {
         textDecoration: completed ? 'line-through' : 'none'
     }}>
@@ -10,6 +10,9 @@ const Todo = ({ removeOnClick, completeOnClick, text, completed }) => (
         </button>
         <button onClick={completeOnClick}>
             {completed ? 'Incomplet':'Complete'}
+        </button>
+        <button onClick={onEditClick}>
+            Edit
         </button>
 
     </li>
